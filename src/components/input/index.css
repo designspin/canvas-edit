@@ -1,0 +1,30 @@
+.input-el {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: text;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  background-color: #444;
+  padding: .5em;
+  margin-bottom: 1px;
+  text-transform: uppercase;
+}
+
+.input-el input {
+  
+  flex: 1;
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  border: none;
+  border-bottom: 1px solid transparent;
+  outline: none;
+  padding: .2em;
+  margin-left: .5em;
+}
+
+.input-el input:focus {
+  border-bottom: 1px dashed #fff;
+}

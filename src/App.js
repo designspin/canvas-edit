@@ -1,28 +1,25 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import ConfigPanel from './components/config-panel';
+import AppProvider from './providers/AppProvider';
+import CanvasView from './components/canvas-view';
+
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+const App = () => 
+  <AppProvider>
+    <div className="canvas-editor">
+      <div className="canvas-editor__toolbar">
+      
       </div>
-    );
-  }
-}
+      <div className="canvas-editor__view">
+        <div className="canvas-editor__canvas">
+          <CanvasView />
+        </div>
+        <div className="canvas-editor__panels">
+          <ConfigPanel />
+        </div>
+      </div>
+    </div>
+  </AppProvider>
 
 export default App;
